@@ -1,0 +1,38 @@
+package ezkabamaniacos;
+
+
+public class CoordenadaGeografica{
+	
+    private double longitud;
+    private double latitud;
+
+    public CoordenadaGeografica() {
+        this.longitud = 0.0;
+        this.latitud = 0.0;
+    }
+
+<<<<<<< HEAD
+    public CoordenadaGeografica(double longitud, double latitud) {
+=======
+    public CoordenadaGeografica(double latitud, double longitud) {
+>>>>>>> 05bfc504ee0b4fc39badc5e967dc16ccb35b8a2f
+        this.longitud = longitud;
+        this.latitud = latitud;
+    }
+
+    public double getLongitud() {
+        return longitud;
+    }
+
+    public void setLongitud(double longitud) {
+        this.longitud = longitud;
+    }
+
+    public double getLatitud() {
+        return latitud;
+    }
+
+    public void setLatitud(double latitud) {
+        this.latitud = latitud;
+    }
+}

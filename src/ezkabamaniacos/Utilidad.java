@@ -87,6 +87,17 @@ public class Utilidad {
 
         return distancia;
     }
+<<<<<<< HEAD
+    
+    public static double distanciaDosCoordenadasGeograficas(CoordenadaGeografica cg1, CoordenadaGeografica cg2){
+        double distancia = 0.0;
+        
+        distancia = distanciaDosCoordenadasUTM(geograficaToUtm(cg1), geograficaToUtm(cg2));
+        
+        return distancia;
+    }
+=======
+>>>>>>> c38e6c145f4d02f36413839bd98bce8263f1f7cc
 
     public static String segundosHoraConFormato(long seg) {
         String horaConFormato = "";

@@ -5,6 +5,10 @@
  */
 package ezkabamaniacos;
 
+<<<<<<< HEAD
+import static ezkabamaniacos.Utilidad.distanciaDosCoordenadasGeograficas;
+=======
+>>>>>>> c38e6c145f4d02f36413839bd98bce8263f1f7cc
 import general.MysqlConnect;
 import java.awt.Color;
 import java.awt.Component;
@@ -40,7 +44,12 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         LONGITUD(7),
         ELEVACION(8),
         PULSACIONES(9),
+<<<<<<< HEAD
+        TIEMPO_A_INICIO(10),
+        TIPO_PUNTO(11);
+=======
         TIEMPO_A_INICIO(10);
+>>>>>>> c38e6c145f4d02f36413839bd98bce8263f1f7cc
         
         private int value;
 
@@ -176,7 +185,11 @@ public class PantallaPrincipal extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jtffNombreTrack, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jtffNombreTrackMaestro, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE))))
+<<<<<<< HEAD
+                .addContainerGap(540, Short.MAX_VALUE))
+=======
                 .addContainerGap(323, Short.MAX_VALUE))
+>>>>>>> c38e6c145f4d02f36413839bd98bce8263f1f7cc
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -252,6 +265,10 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         modeloTabla.addColumn("Elevacion");
         modeloTabla.addColumn("Pulsaciones");  
         modeloTabla.addColumn("Tiempo a Inicio"); 
+<<<<<<< HEAD
+        modeloTabla.addColumn("Tipo");
+=======
+>>>>>>> c38e6c145f4d02f36413839bd98bce8263f1f7cc
         
         jtTrack = new JTable(modeloTabla);
         //jtTrack.setFont(Apariencia.cambiaFuente(Font.PLAIN, 13));
@@ -269,6 +286,10 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jtTrack.getColumn("Elevacion").setMaxWidth(90);
         jtTrack.getColumn("Pulsaciones").setMaxWidth(90);
         jtTrack.getColumn("Tiempo a Inicio").setMaxWidth(80);
+<<<<<<< HEAD
+        jtTrack.getColumn("Tipo").setMaxWidth(200);
+=======
+>>>>>>> c38e6c145f4d02f36413839bd98bce8263f1f7cc
         
          // Hacemos que las columnas se alineen a la DERECHA
         tcr = new DefaultTableCellRenderer();
@@ -283,7 +304,12 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jtTrack.getColumn("Longitud").setCellRenderer(tcr);
         jtTrack.getColumn("Elevacion").setCellRenderer(tcr);
         jtTrack.getColumn("Pulsaciones").setCellRenderer(tcr);
+<<<<<<< HEAD
+        jtTrack.getColumn("Tiempo a Inicio").setCellRenderer(tcr);   
+        jtTrack.getColumn("Tipo").setCellRenderer(tcr); 
+=======
         jtTrack.getColumn("Tiempo a Inicio").setCellRenderer(tcr);
+>>>>>>> c38e6c145f4d02f36413839bd98bce8263f1f7cc
         
         // Hacemos que la comluna del saldo se alinee a la derecha y
         // que salga en rojo si es negativa.
@@ -301,7 +327,11 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         // Si quisieramos barra horizontal, descomentar la linea siguiente
         spTrack.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
         // Agregamos el JScrollPane al contenedor
+<<<<<<< HEAD
+        spTrack.setBounds(10, 100, 1170, 400);
+=======
         spTrack.setBounds(10, 100, 970, 400);
+>>>>>>> c38e6c145f4d02f36413839bd98bce8263f1f7cc
         spTrack.setFont(Apariencia.cambiaFuente());
         spTrack.setBackground(Color.yellow);
         getContentPane().add(spTrack);
@@ -367,6 +397,10 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         gpx = null;
         gpx = Utilidad.cargaTrackDesdeBd(id);
         modeloTabla.setRowCount(0);
+<<<<<<< HEAD
+        CoordenadaGeografica cgKm0 = new CoordenadaGeografica(42.837620, -1.654420);
+=======
+>>>>>>> c38e6c145f4d02f36413839bd98bce8263f1f7cc
         
         if(gpx == null){
             Apariencia.mensajeInformativo(4, "Error al cargar el Track.");
@@ -387,19 +421,35 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         double distanciaAlInicio = 0.0;
         double distanciaTramo = 0.0;
         double velocidadTramo = 0.0;
+<<<<<<< HEAD
+        double distanciaInicioSegmento = 0.0;
+=======
+>>>>>>> c38e6c145f4d02f36413839bd98bce8263f1f7cc
         int diferenciaTramoSegundos = 0;
         int diferenciaInicioSegundos = 0;
         
         TrackPoint punto = new TrackPoint();
+<<<<<<< HEAD
+       
+        
+        int puntoTrack = 1;
+        Iterator<TrackPoint> itrPartidos = gpx.track.iterator();
+        Object fila[] = {"", "", "", "", "", "", "", "", "", "", "", ""};
+=======
         int puntoTrack = 1;
         Iterator<TrackPoint> itrPartidos = gpx.track.iterator();
         Object fila[] = {"", "", "", "", "", "", "", "", "", "", ""};
+>>>>>>> c38e6c145f4d02f36413839bd98bce8263f1f7cc
         
         for(int i = 0; i < gpx.track.size() ; i++){
         //while(itrPartidos.hasNext()){
         //punto = itrPartidos.next();
             
+<<<<<<< HEAD
+           punto = gpx.track.get(i);           
+=======
            punto = gpx.track.get(i);
+>>>>>>> c38e6c145f4d02f36413839bd98bce8263f1f7cc
            
            fila[0] = String.valueOf(puntoTrack);
            fila[1] = punto.dia;
@@ -457,6 +507,13 @@ public class PantallaPrincipal extends javax.swing.JFrame {
            diferenciaInicioSegundos = Utilidad.horaConformatoAsegundos(hora1)  - Utilidad.horaConformatoAsegundos(horaInicial);
            
            fila[10] = Utilidad.segundosHoraConFormato((long) diferenciaInicioSegundos);
+<<<<<<< HEAD
+           
+           distanciaInicioSegmento = distanciaDosCoordenadasGeograficas(cgKm0, cg0);
+           
+           fila[11] = Cadena.formatoConComaDecimal(distanciaInicioSegmento);
+=======
+>>>>>>> c38e6c145f4d02f36413839bd98bce8263f1f7cc
            modeloTabla.addRow(fila);
            
            puntoTrack++;

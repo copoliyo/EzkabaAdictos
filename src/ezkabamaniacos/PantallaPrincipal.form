@@ -58,7 +58,11 @@
                       </Group>
                   </Group>
               </Group>
+<<<<<<< HEAD
+              <EmptySpace pref="540" max="32767" attributes="0"/>
+=======
               <EmptySpace pref="323" max="32767" attributes="0"/>
+>>>>>>> c38e6c145f4d02f36413839bd98bce8263f1f7cc
           </Group>
       </Group>
     </DimensionLayout>
